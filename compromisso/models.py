@@ -5,4 +5,3 @@ class Compromisso(models.Model):
     descricao = models.TextField()
     local = models.CharField(max_length=50)
     dress_code = models.TextField()
-    

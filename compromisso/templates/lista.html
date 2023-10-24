@@ -1,4 +1,8 @@
 <h1>Compromissos agendados</h1>
+<form method="GET">
+    <input type="text" name="q" value="{{ query }}">
+    <button type="submit">Pesquisar</button>
+</form>
 <a href="{% url 'cadastro-compromisso' %}">Novo Compromisso</a>
 {% for item in items %}
     <div>
