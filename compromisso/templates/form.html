@@ -2,10 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário de Compromisso</title>
 </head>
 <body>
-    
+    <h1>Compromisso</h1>
+    {% if erro != None %}
+        {{ erro }}
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+    {% if pk %}
+        <a href="{% url 'deleta-compromisso' pk %}">Remover</a>
+    {% endif %}
 </body>
 </html>

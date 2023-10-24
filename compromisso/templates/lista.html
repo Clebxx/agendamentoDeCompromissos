@@ -1,8 +1,9 @@
-<h1>Compromissos Agendados</h1>
-
+<h1>Compromissos agendados</h1>
+<a href="{% url 'cadastro-compromisso' %}">Novo Compromisso</a>
 {% for item in items %}
     <div>
         <p>{{ item.descricao }}</p>
         <p>{{ item.data }}</p>
+        <a href="{% url 'atualiza-compromisso' item.id %}">Editar</a>
     </div>
-{% endfor %}    
+{% endfor %}
